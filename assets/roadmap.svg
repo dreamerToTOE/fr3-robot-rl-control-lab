@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520">
+<defs>
+  <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#172554"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-opacity=".22"/></filter>
+</defs>
+<rect width="1400" height="520" rx="30" fill="url(#bg)"/>
+<text x="70" y="70" fill="#fff" font-size="38" font-family="Arial,sans-serif" font-weight="700">FR3 Robot RL Control Lab · Learning Roadmap</text>
+<text x="70" y="108" fill="#cbd5e1" font-size="20" font-family="Arial,sans-serif">15% theory · 85% engineering · classical control + RL</text>
+<g font-family="Arial,sans-serif" text-anchor="middle" filter="url(#shadow)">
+  <rect x="70" y="165" width="230" height="125" rx="22" fill="#2563eb"/>
+  <text x="185" y="205" fill="#fff" font-size="24" font-weight="700">RL00–RL03</text>
+  <text x="185" y="238" fill="#dbeafe" font-size="18">MDP · V/Q · Bellman</text>
+  <text x="185" y="266" fill="#dbeafe" font-size="18">Actor-Critic · PPO/SAC</text>
+
+  <rect x="355" y="165" width="230" height="125" rx="22" fill="#059669"/>
+  <text x="470" y="205" fill="#fff" font-size="24" font-weight="700">RL04–RL07</text>
+  <text x="470" y="238" fill="#d1fae5" font-size="18">Pendulum · FR3 Reach</text>
+  <text x="470" y="266" fill="#d1fae5" font-size="18">Reward · PPO vs SAC</text>
+
+  <rect x="640" y="165" width="230" height="125" rx="22" fill="#ea580c"/>
+  <text x="755" y="205" fill="#fff" font-size="24" font-weight="700">RL08–RL10</text>
+  <text x="755" y="238" fill="#ffedd5" font-size="18">Cube Push</text>
+  <text x="755" y="266" fill="#ffedd5" font-size="18">Residual · Force-aware</text>
+
+  <rect x="925" y="165" width="230" height="125" rx="22" fill="#7c3aed"/>
+  <text x="1040" y="205" fill="#fff" font-size="24" font-weight="700">RL11–RL12</text>
+  <text x="1040" y="238" fill="#ede9fe" font-size="18">Safety QP</text>
+  <text x="1040" y="266" fill="#ede9fe" font-size="18">Domain Randomization</text>
+
+  <rect x="1070" y="345" width="260" height="110" rx="22" fill="#db2777"/>
+  <text x="1200" y="385" fill="#fff" font-size="24" font-weight="700">RL13–RL14</text>
+  <text x="1200" y="417" fill="#fce7f3" font-size="18">Dual FR3 · Benchmark</text>
+</g>
+<g fill="none" stroke="#94a3b8" stroke-width="5" stroke-linecap="round">
+<path d="M300 228 H355"/><path d="M585 228 H640"/><path d="M870 228 H925"/><path d="M1040 290 C1040 330 1110 330 1145 345"/>
+</g>
+<g fill="#94a3b8"><polygon points="347,220 355,228 347,236"/><polygon points="632,220 640,228 632,236"/><polygon points="917,220 925,228 917,236"/><polygon points="1138,337 1145,345 1135,346"/></g>
+<text x="70" y="420" fill="#f8fafc" font-size="24" font-family="Arial,sans-serif" font-weight="700">Goal:</text>
+<text x="145" y="420" fill="#cbd5e1" font-size="21" font-family="Arial,sans-serif">from stable classical control → intelligent residual correction → safe dual-arm RL</text>
+</svg>

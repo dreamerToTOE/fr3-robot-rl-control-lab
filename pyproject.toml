@@ -1,0 +1,8 @@
+[project]
+name = "fr3-robot-rl-control-lab"
+version = "0.1.0"
+description = "Engineering-first reinforcement learning lab for FR3 robot control"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

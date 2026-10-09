@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
+*.log
+results/**/checkpoints/*
+results/**/videos/*
+wandb/
+runs/
+.DS_Store

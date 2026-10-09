@@ -4,6 +4,8 @@
 
 本仓库不是“从头抄一遍强化学习教材”，而是一个面向机器人运控的 **工程化 RL 学习与实验仓库**。目标是把传统控制基础（Jacobian、操作空间、阻抗/导纳、QP、力位混合）与强化学习连接起来，最终形成可复现的 FR3 单臂/双臂控制实验。
 
+![FR3 RL roadmap](assets/roadmap.svg)
+
 ---
 
 ## 🗺️ 一张图看路线
@@ -56,6 +58,8 @@ flowchart TD
 ## 🧩 Residual RL 在本项目中的位置
 
 Residual = **残差 / 修正量**。
+
+![Residual RL](assets/residual_rl.svg)
 
 经典控制器先给出基础动作：
 
@@ -165,7 +169,7 @@ results/<date>_<task>_<run-id>/
 └── videos/
 ```
 
-训练完成后 README 可以逐步替换成真实截图、reward 曲线、成功案例 GIF，而不是一开始堆装饰图。
+训练完成后 README 会逐步补充真实 FR3 场景截图、reward 曲线、成功/失败 GIF，让仓库既能教学也能展示研究过程。
 
 ---
 

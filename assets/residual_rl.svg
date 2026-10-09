@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="470" viewBox="0 0 1400 470">
+<rect width="1400" height="470" rx="30" fill="#f8fafc"/>
+<text x="70" y="70" fill="#0f172a" font-size="38" font-family="Arial,sans-serif" font-weight="700">Residual RL · 经典控制负责稳定，RL负责修正</text>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+<rect x="80" y="155" width="230" height="105" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+<text x="195" y="195" font-size="23" font-weight="700" fill="#1e3a8a">Observation</text><text x="195" y="228" font-size="17" fill="#1e40af">pose · wrench · error</text>
+<rect x="375" y="120" width="220" height="90" rx="20" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+<text x="485" y="158" font-size="22" font-weight="700" fill="#5b21b6">RL Policy</text><text x="485" y="187" font-size="17" fill="#6d28d9">ΔF · Δy · Δyaw · ΔB</text>
+<rect x="375" y="255" width="220" height="90" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+<text x="485" y="293" font-size="22" font-weight="700" fill="#166534">Base Controller</text><text x="485" y="322" font-size="17" fill="#15803d">Admittance / QP / IK</text>
+<circle cx="690" cy="232" r="52" fill="#fff7ed" stroke="#ea580c" stroke-width="4"/>
+<text x="690" y="242" font-size="42" font-weight="700" fill="#c2410c">+</text>
+<rect x="810" y="178" width="210" height="105" rx="20" fill="#ffedd5" stroke="#f97316" stroke-width="3"/>
+<text x="915" y="217" font-size="22" font-weight="700" fill="#9a3412">u_total</text><text x="915" y="250" font-size="17" fill="#c2410c">u_base + α·Δu_RL</text>
+<rect x="1095" y="178" width="220" height="105" rx="20" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+<text x="1205" y="217" font-size="22" font-weight="700" fill="#991b1b">FR3 / Dual FR3</text><text x="1205" y="250" font-size="17" fill="#b91c1c">execute safely</text>
+</g>
+<g stroke="#64748b" stroke-width="4" fill="none"><path d="M310 207 H375"/><path d="M595 165 C640 165 640 205 655 215"/><path d="M595 300 C640 300 640 260 655 250"/><path d="M742 232 H810"/><path d="M1020 232 H1095"/></g>
+<g fill="#64748b"><polygon points="365,199 375,207 365,215"/><polygon points="800,224 810,232 800,240"/><polygon points="1085,224 1095,232 1085,240"/></g>
+<text x="70" y="410" fill="#334155" font-size="22" font-family="Arial,sans-serif">关键对照：α = 0 → classical baseline；α &gt; 0 → RL 只学经典控制器没有处理好的部分。</text>
+</svg>

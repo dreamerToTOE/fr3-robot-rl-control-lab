@@ -1,0 +1,39 @@
+{
+  "algo": "ppo",
+  "run_id": "ppo_seed42_300k",
+  "seed": 42,
+  "env_id": "Pendulum-v1",
+  "total_timesteps_requested": 300000,
+  "total_timesteps_actual": 301056,
+  "wall_time_s": 174.53,
+  "num_episodes_logged": 1505,
+  "final_model": "results/rl04/ppo_seed42_300k/final_model.zip",
+  "checkpoints": [
+    "ppo_seed42_100000_steps.zip",
+    "ppo_seed42_150000_steps.zip",
+    "ppo_seed42_200000_steps.zip",
+    "ppo_seed42_250000_steps.zip",
+    "ppo_seed42_300000_steps.zip",
+    "ppo_seed42_50000_steps.zip"
+  ],
+  "versions": {
+    "python": "3.13.12",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "processor": "x86_64",
+    "gymnasium": "1.4.0",
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.6",
+    "cuda_available": false,
+    "torch_num_threads": 8
+  },
+  "git_commit_repo_ref": "05202de2b021c0b53b12acaafb8a9155aa4d00ae",
+  "git_commit_local": "unknown (no .git)",
+  "config_path": "configs/ppo_seed42_extended.yaml",
+  "host": {
+    "cwd": "/home/ubuntu2004/lmy/fr3-robot-rl-control-lab/RL04",
+    "cpu_count": 16
+  }
+}

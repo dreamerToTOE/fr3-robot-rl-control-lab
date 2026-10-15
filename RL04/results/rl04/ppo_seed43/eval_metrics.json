@@ -1,0 +1,32 @@
+{
+  "num_episodes": 20,
+  "mean_episode_return": -1143.1543228044486,
+  "std_episode_return": 265.2628339400801,
+  "min_episode_return": -1632.8385310722156,
+  "max_episode_return": -748.0642834890438,
+  "mean_episode_length": 200.0,
+  "std_episode_length": 0.0,
+  "mean_abs_angle_error_rad": 1.9464335559543469,
+  "std_abs_angle_error_rad": 0.5514556191180817,
+  "mean_abs_angular_velocity_rad_s": 2.983147771797208,
+  "mean_abs_torque_nm": 0.2774590076301246,
+  "max_abs_torque_nm": 0.7282888293266296,
+  "action_saturation_ratio": 0.0,
+  "upright_fraction": 0.0005,
+  "upright_fraction_std": 0.00223606797749979,
+  "terminated_episodes": 0,
+  "truncated_episodes": 20,
+  "evaluation_tolerances": {
+    "upright_angle_tol_rad": 0.2,
+    "upright_angular_vel_tol_rad_s": 1.0,
+    "saturation_threshold_abs_torque_nm": 1.98
+  },
+  "policy": "ppo deterministic",
+  "model_path": "/home/ubuntu2004/lmy/fr3-robot-rl-control-lab/RL04/results/rl04/ppo_seed43/final_model.zip",
+  "deterministic": true,
+  "eval_seeds": [
+    1000,
+    1019
+  ],
+  "episode_time_limit": 200
+}

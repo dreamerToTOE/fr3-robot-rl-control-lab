@@ -1,0 +1,8 @@
+algo,env_step,model,mean_return,std_return,upright_fraction,mean_abs_theta_rad,action_saturation_ratio
+ppo,50000,ppo_seed42_50000_steps.zip,-1102.4873,214.2381,0.0125,1.7757,0.0
+ppo,100000,ppo_seed42_100000_steps.zip,-964.0965,169.754,0.0055,1.6183,0.0
+ppo,150000,ppo_seed42_150000_steps.zip,-923.1614,102.0797,0.0278,1.4765,0.1025
+ppo,200000,ppo_seed42_200000_steps.zip,-428.0526,282.3997,0.5263,0.7727,0.133
+ppo,250000,ppo_seed42_250000_steps.zip,-287.8101,203.462,0.6822,0.532,0.0983
+ppo,300000,ppo_seed42_300000_steps.zip,-227.4718,134.6211,0.744,0.4665,0.0748
+ppo,301056,final_model.zip,-227.2658,133.8632,0.75,0.4705,0.0738

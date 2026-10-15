@@ -1,0 +1,32 @@
+{
+  "num_episodes": 20,
+  "mean_episode_return": -150.80467079811882,
+  "std_episode_return": 84.06676376141095,
+  "min_episode_return": -341.86047714551916,
+  "max_episode_return": -0.9328133613155642,
+  "mean_episode_length": 200.0,
+  "std_episode_length": 0.0,
+  "mean_abs_angle_error_rad": 0.29942486176114935,
+  "std_abs_angle_error_rad": 0.13743674289781932,
+  "mean_abs_angular_velocity_rad_s": 0.5137450661036985,
+  "mean_abs_torque_nm": 0.5084668306112289,
+  "max_abs_torque_nm": 1.9981247186660767,
+  "action_saturation_ratio": 0.030250000000000006,
+  "upright_fraction": 0.8385,
+  "upright_fraction_std": 0.06859683896353731,
+  "terminated_episodes": 0,
+  "truncated_episodes": 20,
+  "evaluation_tolerances": {
+    "upright_angle_tol_rad": 0.2,
+    "upright_angular_vel_tol_rad_s": 1.0,
+    "saturation_threshold_abs_torque_nm": 1.98
+  },
+  "policy": "sac deterministic",
+  "model_path": "/home/ubuntu2004/lmy/fr3-robot-rl-control-lab/RL04/results/rl04/sac_seed44/final_model.zip",
+  "deterministic": true,
+  "eval_seeds": [
+    1000,
+    1019
+  ],
+  "episode_time_limit": 200
+}

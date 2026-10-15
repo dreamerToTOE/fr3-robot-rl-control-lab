@@ -1,0 +1,32 @@
+{
+  "num_episodes": 20,
+  "mean_episode_return": -1258.7842639924697,
+  "std_episode_return": 269.55537341159913,
+  "min_episode_return": -1793.7437685120979,
+  "max_episode_return": -882.9732956527968,
+  "mean_episode_length": 200.0,
+  "std_episode_length": 0.0,
+  "mean_abs_angle_error_rad": 2.107583985059175,
+  "std_abs_angle_error_rad": 0.5394426529795757,
+  "mean_abs_angular_velocity_rad_s": 2.91523680182443,
+  "mean_abs_torque_nm": 0.9972966755995694,
+  "max_abs_torque_nm": 1.9998877048492432,
+  "action_saturation_ratio": 0.01225,
+  "upright_fraction": 0.0005,
+  "upright_fraction_std": 0.00223606797749979,
+  "terminated_episodes": 0,
+  "truncated_episodes": 20,
+  "evaluation_tolerances": {
+    "upright_angle_tol_rad": 0.2,
+    "upright_angular_vel_tol_rad_s": 1.0,
+    "saturation_threshold_abs_torque_nm": 1.98
+  },
+  "policy": "random uniform",
+  "model_path": null,
+  "deterministic": false,
+  "eval_seeds": [
+    1000,
+    1019
+  ],
+  "episode_time_limit": 200
+}

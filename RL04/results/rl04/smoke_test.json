@@ -1,0 +1,113 @@
+{
+  "env_id": "Pendulum-v1",
+  "observation_space": "Box([-1. -1. -8.], [1. 1. 8.], (3,), float32)",
+  "observation_shape": [
+    3
+  ],
+  "action_space": "Box(-2.0, 2.0, (1,), float32)",
+  "action_low": [
+    -2.0
+  ],
+  "action_high": [
+    2.0
+  ],
+  "reset_obs": [
+    -0.14995256066322327,
+    0.9886931777000427,
+    -0.12224312126636505
+  ],
+  "reset_info_keys": [],
+  "reset_cos2sin2": 0.9999999700800659,
+  "step_probe": [
+    {
+      "action": [
+        0.5478467345237732
+      ],
+      "obs": [
+        -0.1845293641090393,
+        0.9828270077705383,
+        0.7014538049697876
+      ],
+      "reward": -2.964725377285596,
+      "terminated": false,
+      "truncated": false,
+      "finite": true
+    },
+    {
+      "action": [
+        -0.9208531379699707
+      ],
+      "obs": [
+        -0.24800007045269012,
+        0.9687600135803223,
+        1.3004460334777832
+      ],
+      "reward": -3.1349551130612836,
+      "terminated": false,
+      "truncated": false,
+      "finite": true
+    },
+    {
+      "action": [
+        -1.8361059427261353
+      ],
+      "obs": [
+        -0.3317851424217224,
+        0.9433549642562866,
+        1.7516001462936401
+      ],
+      "reward": -3.490027538315968,
+      "terminated": false,
+      "truncated": false,
+      "finite": true
+    },
+    {
+      "action": [
+        -1.9338895082473755
+      ],
+      "obs": [
+        -0.4319438338279724,
+        0.9019005298614502,
+        2.1690330505371094
+      ],
+      "reward": -3.954799251064969,
+      "terminated": false,
+      "truncated": false,
+      "finite": true
+    },
+    {
+      "action": [
+        1.25308096408844
+      ],
+      "obs": [
+        -0.5632534623146057,
+        0.8262841701507568,
+        3.0334205627441406
+      ],
+      "reward": -4.542117958902818,
+      "terminated": false,
+      "truncated": false,
+      "finite": true
+    }
+  ],
+  "episode_steps": 200,
+  "episode_return": -1074.0252140362793,
+  "episode_truncated_at_timelimit": true,
+  "episode_terminated": false,
+  "random_policy_return": -883.2176892309598,
+  "random_policy_finite": true,
+  "overall": "PASS",
+  "versions": {
+    "python": "3.13.12",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "processor": "x86_64",
+    "gymnasium": "1.4.0",
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.6",
+    "cuda_available": false,
+    "torch_num_threads": 8
+  }
+}

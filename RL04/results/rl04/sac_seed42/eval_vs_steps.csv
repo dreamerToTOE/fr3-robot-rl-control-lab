@@ -1,0 +1,7 @@
+algo,env_step,model,mean_return,std_return,upright_fraction,mean_abs_theta_rad,action_saturation_ratio
+sac,10000,sac_seed42_10000_steps.zip,-158.3604,86.3402,0.8252,0.2924,0.0027
+sac,20000,sac_seed42_20000_steps.zip,-149.7522,81.871,0.8455,0.3005,0.0245
+sac,30000,sac_seed42_30000_steps.zip,-150.057,83.8471,0.8422,0.2573,0.0307
+sac,40000,sac_seed42_40000_steps.zip,-150.784,81.9544,0.8415,0.3313,0.0345
+sac,50000,sac_seed42_50000_steps.zip,-151.1893,81.555,0.84,0.3377,0.0347
+sac,50000,final_model.zip,-151.2033,81.5309,0.84,0.3379,0.035

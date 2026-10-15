@@ -10,3 +10,7 @@ results/**/videos/*
 wandb/
 runs/
 .DS_Store
+
+# --- 本地 / Agent 产物（不入库） ---
+.upstream_ref/
+.workbuddy/

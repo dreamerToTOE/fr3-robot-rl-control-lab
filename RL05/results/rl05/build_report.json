@@ -1,0 +1,81 @@
+{
+  "task": "RL05 FR3 USD build + interface validation",
+  "utc": "2026-10-16T04:39:50.482568+00:00",
+  "success": true,
+  "articulation_path": "/fr3/root_joint",
+  "drives_configured": 7,
+  "dof_names": [
+    "fr3_joint1",
+    "fr3_joint2",
+    "fr3_joint3",
+    "fr3_joint4",
+    "fr3_joint5",
+    "fr3_joint6",
+    "fr3_joint7"
+  ],
+  "missing_dofs": [],
+  "link_count": 144,
+  "has_ee_link": true,
+  "ready_joint_positions": [
+    0.00013228187162894756,
+    -0.7846085429191589,
+    0.000109421722299885,
+    -2.3571298122406006,
+    0.0003119584871456027,
+    1.5705195665359497,
+    0.7855053544044495
+  ],
+  "ready_joint_velocities": [
+    -0.0006334605859592557,
+    -0.00227216724306345,
+    -0.0001847141538746655,
+    0.009964583441615105,
+    -0.0007731751538813114,
+    0.00024040439166128635,
+    1.2933742254972458e-07
+  ],
+  "root_world_pose": null,
+  "link7_world_translation": [
+    0.30725347995758057,
+    9.201467037200928e-05,
+    0.6965761780738831
+  ],
+  "link7_path": "/fr3/fr3_link7",
+  "jacobian": {
+    "available": true,
+    "shape": [
+      1,
+      21,
+      6,
+      7
+    ],
+    "sample_mat": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "throughput": {
+    "mode": "physx.update_simulation (no render)",
+    "steps": 300,
+    "wall_s": 0.0263,
+    "steps_per_s": 11397.8
+  },
+  "throughput_app_update": {
+    "steps": 30,
+    "wall_s": 0.2554,
+    "steps_per_s": 117.5
+  },
+  "usd_path": "/home/ubuntu2004/lmy/fr3-robot-rl-control-lab/RL05/assets/fr3_no_hand.usd",
+  "usd_size_bytes": 16913011,
+  "status": "ok"
+}

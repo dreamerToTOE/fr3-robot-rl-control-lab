@@ -1,0 +1,31 @@
+# RL05 SAC —— FR3 Cartesian Reach（seed=42）
+algo: sac
+seed: 42
+total_timesteps: 30000
+
+policy: MlpPolicy
+net_arch: [256, 256]
+
+learning_rate: 3.0e-4
+gamma: 0.98
+batch_size: 256
+buffer_size: 300000
+tau: 0.005
+train_freq: 1
+gradient_steps: 1
+learning_starts: 1000
+ent_coef: auto
+
+checkpoint_freq: 10000
+
+# ---- 环境 / 控制 ----
+physics_dt: 0.008333333333333333   # 1/120 s
+decimation: 4                      # → 控制频率 30 Hz
+max_control_steps: 100             # → 单回合 3.33 s 仿真时间
+action_scale: 0.01                 # m / 控制步（末端位移上限）
+success_tol: 0.02                  # m
+hold_steps: 3                      # 连续保持 3 个控制步才算成功
+reset_joint_noise: 0.05            # rad，reset 时关节扰动
+
+# ---- 评估 ----
+eval_episodes: 100

@@ -1,0 +1,32 @@
+# RL05 PPO —— FR3 Cartesian Reach（seed=42）
+algo: ppo
+seed: 42
+total_timesteps: 200000
+
+policy: MlpPolicy
+net_arch: [256, 256]
+
+learning_rate: 3.0e-4
+gamma: 0.98
+n_steps: 1024
+batch_size: 256
+n_epochs: 10
+clip_range: 0.2
+gae_lambda: 0.95
+ent_coef: 0.0
+vf_coef: 0.5
+max_grad_norm: 0.5
+
+checkpoint_freq: 50000
+
+# ---- 环境 / 控制 ----
+physics_dt: 0.008333333333333333
+decimation: 4
+max_control_steps: 100
+action_scale: 0.01
+success_tol: 0.02
+hold_steps: 3
+reset_joint_noise: 0.05
+
+# ---- 评估 ----
+eval_episodes: 100

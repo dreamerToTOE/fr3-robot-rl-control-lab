@@ -1,0 +1,174 @@
+{
+  "utc": "2026-10-16T06:07:53.200293+00:00",
+  "success": true,
+  "ee_index": 20,
+  "link_names_head": [
+    "base",
+    "fr3_link0",
+    "fr3_link1",
+    "fr3_link0_accelerometer_bottom",
+    "fr3_link0_accelerometer_top",
+    "fr3_link2",
+    "fr3_link1_accelerometer_bottom",
+    "fr3_link1_accelerometer_top",
+    "fr3_link3",
+    "fr3_link2_accelerometer_bottom",
+    "fr3_link2_accelerometer_top",
+    "fr3_link4",
+    "fr3_link3_accelerometer_bottom",
+    "fr3_link3_accelerometer_top",
+    "fr3_link5",
+    "fr3_link4_accelerometer_bottom",
+    "fr3_link4_accelerometer_top",
+    "fr3_link6",
+    "fr3_link5_accelerometer_bottom",
+    "fr3_link5_accelerometer_top",
+    "fr3_link7",
+    "fr3_link8"
+  ],
+  "all_pass": true,
+  "tests": [
+    {
+      "test": "1_reset_legal_initial_state",
+      "pass": true,
+      "detail": {
+        "q_dev_from_ready_max": 0.0009353220406005391,
+        "qdot_norm": 0.010273590067975437,
+        "ee_dist_from_home": 2.6453659932539086e-06
+      }
+    },
+    {
+      "test": "2_observation_shape_finite",
+      "pass": true,
+      "detail": {
+        "shape": [
+          20
+        ],
+        "dtype": "float32"
+      }
+    },
+    {
+      "test": "3_action_scale_bounded",
+      "pass": true,
+      "detail": {
+        "measured_step_m": 0.0027051686154066345,
+        "action_scale": 0.01
+      }
+    },
+    {
+      "test": "4_positive_x_action_moves_ee_plus_x",
+      "pass": true,
+      "detail": {
+        "dpos": [
+          0.0026955008506774902,
+          3.063026815652847e-05,
+          -0.00022643804550170898
+        ],
+        "cos_with_plus_x": 0.996426187752555
+      }
+    },
+    {
+      "test": "5_jacobian_matches_motion",
+      "pass": true,
+      "detail": {
+        "cos_sim": 0.9999403812046729,
+        "magnitude_ratio": 0.9997802868129929,
+        "measured": [
+          -2.3096799850463867e-05,
+          0.015421485528349876,
+          -0.0007194876670837402
+        ],
+        "predicted": [
+          0.00014551121502026282,
+          0.015424248829121625,
+          -0.0007187169122343688
+        ]
+      }
+    },
+    {
+      "test": "6_reward_terms_match_design",
+      "pass": true,
+      "detail": {
+        "smoothness_zero_on_first_step": true,
+        "action_zero_when_action_zero": true,
+        "no_joint_limit_in_nominal": true,
+        "progress_positive_toward_target": true,
+        "progress_negative_away_from_target": true,
+        "smoothness_negative_on_change": true,
+        "action_penalty_negative": true
+      }
+    },
+    {
+      "test": "7_success_triggers",
+      "pass": true,
+      "detail": {
+        "hold_steps": 3,
+        "dist": 0.0006570321014472919
+      }
+    },
+    {
+      "test": "8_truncation_at_limit",
+      "pass": true,
+      "detail": {
+        "steps": 100,
+        "max_control_steps": 100
+      }
+    },
+    {
+      "test": "9_repeated_reset_no_drift",
+      "pass": true,
+      "detail": {
+        "drifts": [
+          {
+            "obs_finite": true,
+            "ee_dist_from_home": 2.6453659932539086e-06,
+            "qdot_norm": 0.010273590067975437
+          },
+          {
+            "obs_finite": true,
+            "ee_dist_from_home": 2.6453659932539086e-06,
+            "qdot_norm": 0.010273590067975437
+          },
+          {
+            "obs_finite": true,
+            "ee_dist_from_home": 2.6453659932539086e-06,
+            "qdot_norm": 0.010273590067975437
+          },
+          {
+            "obs_finite": true,
+            "ee_dist_from_home": 2.6453659932539086e-06,
+            "qdot_norm": 0.010273590067975437
+          },
+          {
+            "obs_finite": true,
+            "ee_dist_from_home": 2.6453659932539086e-06,
+            "qdot_norm": 0.010273590067975437
+          }
+        ]
+      }
+    },
+    {
+      "test": "10_random_policy_full_episode",
+      "pass": true,
+      "detail": {
+        "episodes": [
+          {
+            "return": -5.30060316145633,
+            "steps": 100,
+            "success": false
+          },
+          {
+            "return": -4.54141755562786,
+            "steps": 100,
+            "success": false
+          },
+          {
+            "return": -5.076639832705754,
+            "steps": 100,
+            "success": false
+          }
+        ]
+      }
+    }
+  ]
+}

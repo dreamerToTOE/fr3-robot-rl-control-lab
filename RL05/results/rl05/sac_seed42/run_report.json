@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-16T06:09:24.983280+00:00",
+  "algo": "sac",
+  "run_id": "sac_seed42",
+  "success": false,
+  "error": "'SAC' object has no attribute 'get_params'",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/ubuntu2004/lmy/fr3-robot-rl-control-lab/RL05/scripts/train.py\", line 213, in main\n    hyper = {k: v for k, v in model.get_params().items() if k not in (\"policy\", \"env\")}\nAttributeError: 'SAC' object has no attribute 'get_params'\n"
+}

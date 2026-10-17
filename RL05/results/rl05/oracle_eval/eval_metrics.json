@@ -1,0 +1,28 @@
+{
+  "policy": "oracle",
+  "n_episodes": 100,
+  "success_rate": 0.7,
+  "success_count": 70,
+  "mean_final_position_error_m": 0.03255774796040254,
+  "std_final_position_error_m": 0.03612404388919287,
+  "median_final_position_error_m": 0.014764801140797517,
+  "mean_time_to_success_s": 1.9290476190476193,
+  "std_time_to_success_s": 0.8177562765349369,
+  "mean_return": 6.46237647415675,
+  "std_return": 4.757355559651158,
+  "mean_episode_length": 70.51,
+  "action_saturation_ratio": 0.5015833063158194,
+  "mean_action_norm": 0.9999999885966617,
+  "action_smoothness_rms": 0.1301323221951772,
+  "total_joint_limit_violations": 0,
+  "total_collision_steps": 0,
+  "eval_wall_s": 30.62,
+  "evaluation_tolerances": {
+    "success_tol_m": 0.02,
+    "hold_steps": 3,
+    "max_control_steps": 100,
+    "control_hz": 30.0,
+    "action_scale_m": 0.01,
+    "upright_equivalent": "|ee - target| <= 0.02 m held for 3 control steps"
+  }
+}

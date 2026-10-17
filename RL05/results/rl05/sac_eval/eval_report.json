@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-16T07:24:52.664639+00:00",
+  "policy": "sac",
+  "success": true,
+  "n_targets": 100,
+  "success_tol": 0.02,
+  "hold_steps": 3,
+  "contact_api_available": false,
+  "model_path": "results/rl05/sac_seed42_v2/final_model.zip",
+  "metrics": {
+    "policy": "sac",
+    "n_episodes": 100,
+    "success_rate": 0.12,
+    "success_count": 12,
+    "mean_final_position_error_m": 0.08627642652294304,
+    "std_final_position_error_m": 0.06344067310565557,
+    "median_final_position_error_m": 0.061107873130310214,
+    "mean_time_to_success_s": 1.7861111111111108,
+    "std_time_to_success_s": 0.6696084086056722,
+    "mean_return": 0.03217348274835153,
+    "std_return": 3.5488783614435655,
+    "mean_episode_length": 94.43,
+    "action_saturation_ratio": 0.5428004950035886,
+    "mean_action_norm": 0.9450801899269053,
+    "action_smoothness_rms": 0.2867894140136656,
+    "total_joint_limit_violations": 0,
+    "total_collision_steps": 0,
+    "eval_wall_s": 45.77,
+    "evaluation_tolerances": {
+      "success_tol_m": 0.02,
+      "hold_steps": 3,
+      "max_control_steps": 100,
+      "control_hz": 30.0,
+      "action_scale_m": 0.01,
+      "upright_equivalent": "|ee - target| <= 0.02 m held for 3 control steps"
+    },
+    "model_path": "results/rl05/sac_seed42_v2/final_model.zip"
+  }
+}

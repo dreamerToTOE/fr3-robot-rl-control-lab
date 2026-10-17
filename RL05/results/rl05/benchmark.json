@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-16T05:59:23.958547+00:00",
+  "success": true,
+  "sim_init_s": 0.69,
+  "ms_get_joint_positions": 0.0213,
+  "ms_get_joint_velocities": 0.0204,
+  "ms_get_link_transforms": 0.0068,
+  "ms_get_jacobians": 0.0132,
+  "ms_get_contact_forces": 0.0015,
+  "ms_update_sim_1step": 0.0754,
+  "ms_update_sim_4step": 0.2754,
+  "ms_ik_solve": 0.1961,
+  "ms_full_control_step": 4.5076,
+  "contact_api_available": false,
+  "rollout": {
+    "wall_s": 0.45,
+    "steps": 100,
+    "success": false,
+    "final_error": 0.13452465777079597,
+    "ms_per_control_step": 4.479
+  },
+  "candidate_loop": {
+    "n": 20,
+    "s_per_candidate": 0.5089
+  },
+  "projected": {
+    "control_steps_per_s": 223.3,
+    "wall_s_for_20k_env_steps": 89.6,
+    "wall_s_for_50k_env_steps": 224.0,
+    "wall_s_for_2000_candidates": 1017.9
+  }
+}

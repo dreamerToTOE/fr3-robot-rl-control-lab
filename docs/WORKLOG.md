@@ -4,6 +4,54 @@ Append-only learning and engineering log.
 
 ---
 
+## 2026-10-16 — RL05 FR3 Cartesian Reach（真实 Isaac Sim 物理）
+
+### 目标
+建立第一套**真实 FR3 物理仿真**的 RL 环境：Actor 输出末端笛卡尔位置增量 → DLS Jacobian/IK → 关节指令。
+
+### 平台
+- Ubuntu 22.04.5 / Isaac Sim **4.5.0**（`/home/ubuntu2004/isaacsim-4.5.0/python.sh`，Python 3.10.15）
+- GPU：RTX 3070 8 GB（驱动 580 / CUDA 13.0）；Isaac 自带 torch 2.5.1+cu118（CUDA 可用）
+- RL：Stable-Baselines3 **2.6.0** 经 `pip install --target RL05/.pydeps` 注入（**未修改 Isaac Sim 安装**；
+  SB3 2.9 要求 torch ≥ 2.8，与 Isaac 的 2.5.1 冲突，故降级到 2.6.0）
+- FR3 模型：复用双臂码垛工程 `isaac/assets/fr3_no_hand.urdf` → 导入为 `RL05/assets/fr3_no_hand.usd`
+  （网格只读引用对方 `franka_description`，**未修改对方仓库任何文件**）
+
+### 步骤与结果
+1. **USD 构建 + 接口自省**：`build_fr3_usd.py`、`introspect_and_validate.py`、`benchmark_env.py`
+   - Articulation 有效，DOF = `fr3_joint1..7`，EE = `fr3_link7`（Jacobian link index 20）
+   - `get_jacobians()` 形状 `(1,21,6,7)`；**Jacobian 数值核验 cos_sim = 0.9997**
+   - 吞吐：纯物理 15 000 steps/s；**完整控制步 4.5 ms → 223 步/s**
+2. **经典 DLS 诊断 → 发现并修复根因**
+   - 首次诊断：24 目标 **0/24 成功**，末端误差全程不变（final ≈ min），关节跟踪误差仅 0.001 rad
+   - 根因：任务公式中 `qdot_cmd` 是关节**速度**，`Kp=1.0` 时末端速度只有 0.02 m/s → 每控制步 0.0007 m
+   - 修复：`Kp = 1/control_dt = 30 (1/s)` → **24/24 成功**，平均末端误差 0.011 m
+   - 统一封装 `controllers/dls_ik.default_fr3_controller()`，所有脚本共用（防止各自调参口径漂移）
+3. **可达目标池**：`generate_targets.py` → 600 训练 + 100 评估（不重叠），接受率 **93.7%**
+4. **环境 10 项接口测试**：`tests/test_env_interface.py` → **10/10 PASS**
+   - 期间拦下一个真实 bug：`reset()` 未给 `self._target` 赋值（(7,) vs (3,)），会导致训练直接崩溃
+5. **独立评估（100 个固定可达目标，30 Hz，tol 0.02 m 保持 3 步）**
+
+   | Policy | Success | Mean final err (m) | Mean return |
+   |---|---|---|---|
+   | Random | 0.0% | 0.2152 | −4.97 |
+   | Classical DLS | **90.0%** | **0.0136** | 9.00 |
+
+6. **SAC 30k 步试点**：return −5.0 → −0.56（单调改善）、动作平滑性提升 26 倍，但成功率仅 **2%**，
+   末端误差 ≈ 初始距离 → 判定 **训练预算不足**（门禁全过、经典基线同环境 90% → 排除环境/接口/评估问题）
+7. **一次修复**：SAC 提升至 **150k** 步、PPO **200k** 步（`sac_seed42_r2` / `ppo_seed42_r2`）
+   - 实测吞吐：SAC ≈ 66 env steps/s（每步一次梯度更新）
+
+### 过程中修复的工程缺陷
+- SB3 2.6.0 的 SAC 无 `get_params()` → 训练完成后写 metadata 崩溃（改为三级回退）
+- 缺 `configs/ppo_fr3_reach.yaml` → PPO 训练静默失败（异常在 try 之外，日志过滤看不到）
+- `plot.py` 需用带 matplotlib 的解释器（RL04 venv），不能用系统 `python3`
+- 本机 `/tmp` 仅 10 MB → 所有 pip 操作前必须 `TMPDIR=/home/ubuntu2004/.workbuddy/tmp`
+
+### 产出
+- `RL05/{envs,controllers,scripts,tests,configs,assets,results}`、`RL05/README.md`、`RL05_REPORT.md`
+- 结论见 `RL05_REPORT.md` 与 `results/rl05/comparison/comparison.md`
+
 ## 2026-10-15 — RL04 Pendulum Continuous-Control Pipeline
 
 ### 目标

@@ -1,0 +1,82 @@
+{
+  "utc": "2026-10-16T05:12:54.965984+00:00",
+  "success": false,
+  "articulation_valid": true,
+  "num_dof": 7,
+  "dof_names": [
+    "fr3_joint1",
+    "fr3_joint2",
+    "fr3_joint3",
+    "fr3_joint4",
+    "fr3_joint5",
+    "fr3_joint6",
+    "fr3_joint7"
+  ],
+  "pose_jacobian_api": [
+    "_link_indices",
+    "_non_root_link",
+    "get_jacobian_shape",
+    "get_jacobians",
+    "get_link_index",
+    "get_local_poses",
+    "get_world_poses",
+    "is_non_root_articulation_link",
+    "set_local_poses",
+    "set_world_poses"
+  ],
+  "from_body_names": [
+    "base",
+    "fr3_link0",
+    "fr3_link1",
+    "fr3_link0_accelerometer_bottom",
+    "fr3_link0_accelerometer_top",
+    "fr3_link2",
+    "fr3_link1_accelerometer_bottom",
+    "fr3_link1_accelerometer_top",
+    "fr3_link3",
+    "fr3_link2_accelerometer_bottom",
+    "fr3_link2_accelerometer_top",
+    "fr3_link4",
+    "fr3_link3_accelerometer_bottom",
+    "fr3_link3_accelerometer_top",
+    "fr3_link5",
+    "fr3_link4_accelerometer_bottom",
+    "fr3_link4_accelerometer_top",
+    "fr3_link6",
+    "fr3_link5_accelerometer_bottom",
+    "fr3_link5_accelerometer_top",
+    "fr3_link7",
+    "fr3_link8"
+  ],
+  "ee_link_index": 20,
+  "ee_link_source": "link_names",
+  "num_jacobian_links": 21,
+  "jacobian_full_shape": [
+    1,
+    21,
+    6,
+    7
+  ],
+  "num_links_from_pose_api": 1,
+  "dof_positions": [
+    0.00025933876167982817,
+    -0.24079842865467072,
+    7.859499601181597e-05,
+    -1.8920860290527344,
+    -3.8155583752086386e-05,
+    0.8062779307365417,
+    0.08666765689849854
+  ],
+  "jacobian_pos_shape": [
+    3,
+    7
+  ],
+  "jacobian_pos_norm": 0.8320363283979697,
+  "jacobian_pos_singular_values": [
+    0.5776174275219544,
+    0.5408708873268135,
+    0.2571016188964962
+  ],
+  "error": "index 20 is out of bounds for axis 0 with size 1",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/ubuntu2004/lmy/fr3-robot-rl-control-lab/RL05/scripts/validate_kinematics.py\", line 145, in main\n    p_before = pos[ee_idx] if pos is not None else None\nIndexError: index 20 is out of bounds for axis 0 with size 1\n"
+}

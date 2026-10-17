@@ -1,3 +1,4 @@
+# --- RL04 / 通用 ---
 __pycache__/
 *.pyc
 .venv/
@@ -14,3 +15,13 @@ runs/
 # --- 本地 / Agent 产物（不入库） ---
 .upstream_ref/
 .workbuddy/
+
+# --- RL05 大文件与可再生工件 ---
+# SB3 注入目录（由 RL05/README.md 的一条 pip 命令重建）
+RL05/.pydeps/
+# FR3 USD 由 URDF 重新导出（scripts/build_fr3_usd.py）
+RL05/assets/*.usd
+RL05/**/__pycache__/
+# checkpoint 与 SB3 训练日志体积大、可复现
+RL05/results/**/checkpoints/
+RL05/results/**/logs/

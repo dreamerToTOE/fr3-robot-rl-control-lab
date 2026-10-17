@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-16T06:08:06.250176+00:00",
+  "policy": "classical",
+  "success": true,
+  "n_targets": 100,
+  "success_tol": 0.02,
+  "hold_steps": 3,
+  "contact_api_available": false,
+  "metrics": {
+    "policy": "classical",
+    "n_episodes": 100,
+    "success_rate": 0.9,
+    "success_count": 90,
+    "mean_final_position_error_m": 0.013620083413809457,
+    "std_final_position_error_m": 0.010591125056565441,
+    "median_final_position_error_m": 0.011298624221807144,
+    "mean_time_to_success_s": 1.4611111111111108,
+    "std_time_to_success_s": 0.745058628263952,
+    "mean_return": 9.0,
+    "std_return": 3.0151134457776365,
+    "mean_episode_length": 49.45,
+    "action_saturation_ratio": 0.0,
+    "mean_action_norm": 0.019736384789293616,
+    "action_smoothness_rms": 0.003345237708497727,
+    "total_joint_limit_violations": 0,
+    "total_collision_steps": 0,
+    "eval_wall_s": 19.52,
+    "evaluation_tolerances": {
+      "success_tol_m": 0.02,
+      "hold_steps": 3,
+      "max_control_steps": 100,
+      "control_hz": 30.0,
+      "action_scale_m": 0.01,
+      "upright_equivalent": "|ee - target| <= 0.02 m held for 3 control steps"
+    }
+  }
+}

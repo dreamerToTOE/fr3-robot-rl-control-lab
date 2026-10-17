@@ -1,0 +1,41 @@
+# RL05 SAC v2 —— FR3 Cartesian Reach（奖励重平衡版，seed=42）
+#
+# 版本原因（真实诊断结论，见 RL05_REPORT.md §7）：
+#   原始奖励下 action_penalty = 0.01·||a||² 累计 100 步 ≈ 0.5（|a|≈0.7），
+#   而整个回合可用 progress 信号仅 ≈ 0.3（初始距离量级）。
+#   → 「朝目标移动」在即时回报上是**负收益**，形成"少动/不动"的局部最优。
+#   修复：把 progress 权重提上来、把动作/平滑惩罚降到真正"辅助"的量级，
+#   使每步朝目标移动的净回报为正。**未改动任何评估口径**（目标集/容差/协议完全不变）。
+algo: sac
+seed: 42
+total_timesteps: 100000
+
+policy: MlpPolicy
+net_arch: [256, 256]
+
+learning_rate: 3.0e-4
+gamma: 0.98
+batch_size: 256
+buffer_size: 300000
+tau: 0.005
+train_freq: 1
+gradient_steps: 1
+learning_starts: 1000
+ent_coef: auto
+
+checkpoint_freq: 20000
+
+# ---- 环境 / 控制（与 v1 完全一致）----
+physics_dt: 0.008333333333333333
+decimation: 4
+max_control_steps: 100
+action_scale: 0.01
+success_tol: 0.02
+hold_steps: 3
+reset_joint_noise: 0.05
+
+# ---- 奖励权重（v2 相对 v1 的唯一改动）----
+progress_coef: 10.0          # v1: 1.0
+success_bonus: 10.0
+action_penalty_coef: 0.001   # v1: 0.01
+smoothness_coef: 0.002       # v1: 0.02

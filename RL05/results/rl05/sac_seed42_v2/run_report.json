@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-16T06:39:01.896576+00:00",
+  "algo": "sac",
+  "run_id": "sac_seed42_v2",
+  "success": false,
+  "error": "Object of type Tensor is not JSON serializable",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/ubuntu2004/lmy/fr3-robot-rl-control-lab/RL05/scripts/train.py\", line 235, in main\n    (run_dir / \"metadata.json\").write_text(json.dumps({\n  File \"/home/ubuntu2004/isaacsim-4.5.0/kit/python/lib/python3.10/json/__init__.py\", line 238, in dumps\n    **kw).encode(obj)\n  File \"/home/ubuntu2004/isaacsim-4.5.0/kit/python/lib/python3.10/json/encoder.py\", line 201, in encode\n    chunks = list(chunks)\n  File \"/home/ubuntu2004/isaacsim-4.5.0/kit/python/lib/python3.10/json/encoder.py\", line 431, in _iterencode\n    yield from _iterencode_dict(o, _current_indent_level)\n  File \"/home/ubuntu2004/isaacsim-4.5.0/kit/python/lib/python3.10/json/encoder.py\", line 405, in _iterencode_dict\n    yield from chunks\n  File \"/home/ubuntu2004/isaacsim-4.5.0/kit/python/lib/python3.10/json/encoder.py\", line 405, in _iterencode_dict\n    yield from chunks\n  File \"/home/ubuntu2004/isaacsim-4.5.0/kit/python/lib/python3.10/json/encoder.py\", line 405, in _iterencode_dict\n    yield from chunks\n  [Previous line repeated 2 more times]\n  File \"/home/ubuntu2004/isaacsim-4.5.0/kit/python/lib/python3.10/json/encoder.py\", line 438, in _iterencode\n    o = _default(o)\n  File \"/home/ubuntu2004/isaacsim-4.5.0/kit/python/lib/python3.10/json/encoder.py\", line 179, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type Tensor is not JSON serializable\n"
+}

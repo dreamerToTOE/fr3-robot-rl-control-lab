@@ -1,0 +1,28 @@
+{
+  "policy": "random",
+  "n_episodes": 100,
+  "success_rate": 0.0,
+  "success_count": 0,
+  "mean_final_position_error_m": 0.21521625282831874,
+  "std_final_position_error_m": 0.09751229066892263,
+  "median_final_position_error_m": 0.20232535829643283,
+  "mean_time_to_success_s": null,
+  "std_time_to_success_s": null,
+  "mean_return": -4.974644931319788,
+  "std_return": 0.29512589942743994,
+  "mean_episode_length": 100.0,
+  "action_saturation_ratio": 0.4772,
+  "mean_action_norm": 0.9613971763677895,
+  "action_smoothness_rms": 1.409380340999207,
+  "total_joint_limit_violations": 0,
+  "total_collision_steps": 0,
+  "eval_wall_s": 37.35,
+  "evaluation_tolerances": {
+    "success_tol_m": 0.02,
+    "hold_steps": 3,
+    "max_control_steps": 100,
+    "control_hz": 30.0,
+    "action_scale_m": 0.01,
+    "upright_equivalent": "|ee - target| <= 0.02 m held for 3 control steps"
+  }
+}
